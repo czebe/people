@@ -1,0 +1,16 @@
+@import 'src/styles/config/config';
+
+.search {
+	position: relative;
+
+	&__icon {
+		@include position(absolute, null 0 0 null);
+		z-index: 1;
+	}
+
+	&__field {
+		min-width: 260px;
+		padding-right: $spacing-double;
+		box-sizing: border-box;
+	}
+}

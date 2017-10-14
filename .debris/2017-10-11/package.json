@@ -1,0 +1,31 @@
+{
+  "name": "people",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "npm-run-all -p watch-css json-server start-react",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "start-react": "react-scripts start",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
+    "json-server": "json-server --watch src/db/db.js -p 3001",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "axios": "^0.16.2",
+    "faker": "^4.1.0",
+    "generact": "^0.3.1",
+    "json-server": "^0.12.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1",
+    "react-validator-prop-types": "^1.1.0"
+  }
+}

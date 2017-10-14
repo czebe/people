@@ -1,0 +1,27 @@
+.persons-group {
+  padding: 10px; }
+  .persons-group__title {
+    display: flex;
+    padding: 0 10px;
+    margin: 20px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    align-items: center; }
+    .persons-group__title::before, .persons-group__title::after {
+      content: '';
+      height: 3px;
+      background-color: #000;
+      flex: 1; }
+    .persons-group__title::before {
+      margin-right: 20px; }
+    .persons-group__title::after {
+      margin-left: 20px; }
+  .persons-group__name {
+    display: inline-block;
+    min-width: 280px;
+    padding: 2px 5px;
+    text-align: center;
+    border: 3px solid #000; }
+  .persons-group__list {
+    display: flex;
+    flex-wrap: wrap; }

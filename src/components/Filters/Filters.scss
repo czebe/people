@@ -1,0 +1,17 @@
+@import 'src/styles/config/config';
+
+.filters {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__group {
+		padding: 0 $spacing-half;
+		flex: 1 1 33.33%;
+		box-sizing: border-box;
+
+		&--options {
+			padding: $spacing-half 0;
+			flex: 1 1 100%;
+		}
+	}
+}

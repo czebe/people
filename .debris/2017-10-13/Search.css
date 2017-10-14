@@ -1,0 +1,10 @@
+.search {
+  position: relative; }
+  .search__icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1; }
+  .search__field {
+    padding-right: 40px;
+    box-sizing: border-box; }

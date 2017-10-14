@@ -1,0 +1,7 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap; }
+  .filters__group {
+    padding: 0 10px;
+    flex: 1 1 33.33%;
+    box-sizing: border-box; }

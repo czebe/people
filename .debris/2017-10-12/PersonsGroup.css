@@ -1,0 +1,8 @@
+.persons-group {
+  padding: 10px; }
+  .persons-group__title {
+    font-size: 2em;
+    text-transform: uppercase; }
+  .persons-group__list {
+    display: flex;
+    flex-wrap: wrap; }

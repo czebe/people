@@ -1,0 +1,43 @@
+@import 'src/styles/config/config';
+
+.persons-group {
+	padding: $spacing-half;
+
+	&__title {
+		display: flex;
+		padding: 0 $spacing-half;
+		margin: $spacing 0;
+		font-size: 2em;
+		text-transform: uppercase;
+		align-items: center;
+
+		&::before,
+		&::after {
+			content: '';
+			height: 3px;
+			background-color: $black;
+			flex: 1;
+		}
+
+		&::before {
+			margin-right: $spacing;
+		}
+
+		&::after {
+			margin-left: $spacing;
+		}
+	}
+
+	&__name {
+		display: inline-block;
+		min-width: 280px;
+		padding: 2px 5px;
+		text-align: center;
+		border: 3px solid $black;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

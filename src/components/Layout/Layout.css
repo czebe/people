@@ -1,0 +1,30 @@
+@media all and (max-width: 600px) {
+  .layout .sticky-outer-wrapper.active .sticky-inner-wrapper {
+    position: relative !important; } }
+
+.header {
+  display: flex;
+  padding: 10px 10px 20px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline; }
+
+.title {
+  margin: 0 10px;
+  margin-right: auto;
+  border-bottom: 3px solid #000;
+  flex: 0 0 auto; }
+
+.search-container {
+  margin: 0 10px;
+  flex: 1 1 auto; }
+
+.filters-container {
+  width: 100%; }
+
+.noresults {
+  padding: 20px;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center; }

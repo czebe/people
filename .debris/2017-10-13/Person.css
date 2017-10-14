@@ -1,0 +1,41 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 0;
+  padding: 5px 10px;
+  flex: 0 0 calc(20% -  20px);
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center center;
+  margin: 10px;
+  transition: background-position 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  box-sizing: border-box; }
+  .person::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .person::before {
+    content: '';
+    float: left;
+    padding-bottom: 110%; }
+  .person--selected {
+    background-position: left center; }
+  .person__name, .person__position, .person__department {
+    display: inline;
+    position: relative;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 5px 0 0 #fff, -5px 0 0 #fff; }
+  .person__name {
+    font-size: 24px;
+    line-height: 1.3em;
+    font-weight: bold; }
+  .person__position {
+    font-weight: bold;
+    line-height: 16px; }
+  .person__department {
+    line-height: 16px; }
+
+.details {
+  display: none; }

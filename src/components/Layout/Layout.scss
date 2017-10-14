@@ -1,0 +1,41 @@
+@import 'src/styles/config/config';
+
+.layout {
+	.sticky-outer-wrapper.active .sticky-inner-wrapper {
+		@media all and (max-width: $bp-mobile) {
+			position: relative !important; // Disable sticky header on mobile
+		}
+	}
+}
+
+.header {
+	display: flex;
+	padding: $spacing-half $spacing-half $spacing;
+	background-color: $white;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.title {
+	margin: 0 $spacing-half;
+	margin-right: auto;
+	border-bottom: 3px solid $black;
+	flex: 0 0 auto;
+}
+
+.search-container {
+	margin: 0 $spacing-half;
+	flex: 1 1 auto;
+}
+
+.filters-container {
+	width: 100%;
+}
+
+.noresults {
+	padding: $spacing;
+	font-size: 28px;
+	font-weight: 300;
+	text-align: center;
+}

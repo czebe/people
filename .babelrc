@@ -1,0 +1,10 @@
+{
+	"presets": ["react", "es2015", ["env", {
+		"targets": {
+			"browsers": ["last 2 versions", "safari >= 9"],
+			"node": "current"
+		}
+	}]],
+
+	"plugins": ["transform-class-properties"]
+}

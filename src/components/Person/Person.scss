@@ -1,0 +1,157 @@
+@import 'src/styles/config/config';
+
+$margin: $spacing-half;
+
+@mixin grid($columns) {
+	$boxWidth: percentage(1 / $columns);
+	width: 0;
+	height: (130 / $columns) * 1vw;
+	flex: 0 0 calc(#{$boxWidth} -  #{2 * $margin});
+}
+
+.person {
+	@include clearfix();
+	position: relative;
+	display: flex;
+	padding: $spacing-quarter $spacing-half;
+	margin: $margin;
+	overflow: hidden;
+	outline: none;
+	background-color: $grey;
+	flex-direction: column;
+	justify-content: flex-end;
+	box-sizing: border-box;
+
+	@media all and (min-width: $bp-desktop + 1) {
+		@include grid(5);
+	}
+
+	@media all and (max-width: $bp-desktop) {
+		@include grid(4);
+	}
+
+	@media all and (max-width: $bp-tablet) {
+		@include grid(2);
+	}
+
+	@media all and (max-width: $bp-mobile) {
+		width: 100%;
+		height: 130vw;
+		flex: 1 0 100%;
+	}
+
+	&--selected {
+		&::after {
+			content: '';
+			@include position(absolute, 0 null null 0);
+			@include size(100%);
+			pointer-events: none;
+			outline: 11px solid $blue;
+			outline-offset: -10px;
+		}
+
+		.person__photo {
+			background-position: left center;
+		}
+
+		.highlights {
+			transform: translateX(-100%);
+		}
+
+		.details {
+			transform: translateY(0);
+		}
+	}
+
+	&__photo {
+		@include size(100% 130vw);
+		background-position: center center;
+		background-size: cover;
+		transition: background-position .6s $ease-out-expo;
+
+		@media all and (min-width: $bp-mobile + 1) {
+			@include position(absolute, 0 null null 0);
+			@include size(100%);
+		}
+	}
+
+	&__name,
+	&__position,
+	&__department {
+		position: relative;
+		display: inline;
+		margin-right: auto;
+		background-color: $white;
+		box-shadow: $spacing-quarter 0 0 $white, -$spacing-quarter 0 0 $white;
+	}
+
+	&__name {
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 1.3em;
+	}
+
+	&__position {
+		font-weight: bold;
+		line-height: 16px;
+	}
+
+	&__department {
+		line-height: 16px;
+	}
+}
+
+.highlights {
+	position: relative;
+	transition: transform .6s $ease-out-expo;
+
+	@media all and (max-width: $bp-mobile) {
+		margin-top: $spacing-quarter;
+	}
+}
+
+.details {
+	@include position(absolute, 0 null null 0);
+	@include size(100%);
+	padding: $spacing-half $spacing;
+	font-size: 14px;
+	background-color: $white;
+	transform: translateY(100%);
+	transition: transform .6s $ease-out-expo;
+	box-sizing: border-box;
+
+	&__title {
+		font-weight: normal;
+	}
+
+	&__group {
+		padding: $spacing-quarter 0;
+		margin: $spacing-half 0;
+		border-top: 1px dotted $grey;
+	}
+
+	&__key {
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__value {
+		display: block;
+		margin: 0;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+
+		a {
+			text-decoration: none;
+			color: $blue;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+}
