@@ -1,8 +1,0 @@
-{
-	"presets": [ "es2015", "react", ["env", {
-		"targets": {
-			"browsers": ["last 2 versions", "safari >= 9"],
-			"node": "current"
-		}
-	}]]
-}
